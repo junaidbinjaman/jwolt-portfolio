@@ -1,0 +1,25 @@
+.header-inner {}
+
+.header-inner ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 30px 20px;
+    font-size: 22px;
+    font-family: var(--primary-font);
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+}
+
+.header-inner ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.header-inner ul li:hover {
+    color: rgb(210, 213, 216);
+}
+
+.header-inner ul li:active {
+    color: var(--third-color);
+    transform: scale(0.7);
+}

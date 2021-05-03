@@ -1,0 +1,73 @@
+// hero area style starts from here
+.heroArea-container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+// about section style starts
+.about-section {
+    width: 1000px;
+    margin: 100px auto;
+}
+
+// skill section style starts
+.skill-container {
+    width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+// portfolio section style starts
+.portfolio-container {
+    width: 1000px;
+    margin: 70px auto;
+}
+
+// blog section style starts
+.blog-container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+// contact section style starts
+.contact-container {
+    width: 1000px;
+    margin: 100px auto;
+}
+
+// footer section style starts from here
+.footer-container {
+    width: 1000px;
+    margin: 150px auto;
+}
+
+.copiright-section {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.copy-right-text {
+    margin-top: 300px;
+    color: white;
+    font-size: 20px;
+    border-top: 1px solid rgb(99, 86, 86);
+    padding: 16px;
+    width: 1000px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.copy-right-text i {
+    background-color: var(--third-color);
+    padding: 10px;
+    cursor: pointer;
+}
+
+.copy-right-text a {
+    color: white;
+}
+
+.copy-right-text i:active {
+    transform: scale(1.07);
+}

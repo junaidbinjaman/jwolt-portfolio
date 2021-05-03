@@ -1,0 +1,235 @@
+.heroArea-inner {
+    height: 540px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.heroArea-inner h1 {
+    color: white;
+    font-size: 50px;
+    font-family: var(--primary-font);
+}
+
+.heroArea-inner b {
+    font-size: 57px;
+    -webkit-text-fill-color: var(--primary-color);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+    position: relative;
+}
+
+.heroArea-inner b::before {
+    content: "Hello_World...";
+    -webkit-text-fill-color: var(--third-color);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--third-color);
+    border-right: 5px solid var(--third-color);
+    position: absolute;
+    width: 0px;
+    overflow: hidden;
+    animation-name: heroTextAnim;
+    animation-iteration-count: infinite;
+    animation-duration: 7s;
+}
+
+@keyframes heroTextAnim {
+    0%,
+    90% {
+        width: 0px;
+    }
+    50%,
+    70% {
+        width: 100%;
+    }
+}
+
+.heroArea-inner h3 {
+    font-size: 35px;
+    margin-top: 20px;
+    color: var(--third-color);
+}
+
+.heroArea-inner ul li {
+    display: inline-block;
+    padding: 30px 20px;
+    color: white;
+}
+
+.heroArea-inner ul> :first-child {
+    position: relative;
+}
+
+.heroArea-inner ul> :first-child::before {
+    position: absolute;
+    left: -100px;
+    top: 50%;
+    content: "";
+    width: 100px;
+    height: 2px;
+    background-color: white;
+    color: red;
+    animation-name: first-child-bar;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes first-child-bar {
+    0%,
+    100% {
+        left: -90px;
+    }
+    50% {
+        left: -110px;
+    }
+}
+
+.heroArea-inner ul> :last-child {
+    position: relative;
+}
+
+.heroArea-inner ul> :last-child::after {
+    position: absolute;
+    right: -100px;
+    top: 50%;
+    content: "";
+    width: 100px;
+    height: 2px;
+    background-color: white;
+    color: red;
+    animation-name: last-child-bar;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes last-child-bar {
+    0%,
+    100% {
+        right: -90px;
+    }
+    50% {
+        right: -110px;
+    }
+}
+
+// button css style area starts
+button {
+    display: inline-block;
+    position: relative;
+    background: none;
+    border: 2px solid var(--third-color);
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 20px 30px;
+    background: rgba(0, 0, 0, 0.09);
+    transition: all 0.3s ease-in-out;
+}
+
+button:active {
+    transform: scale(0.7);
+}
+
+span {
+    display: block;
+    padding: 14px 40px;
+}
+
+button::before,
+button::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    transition: all 0.2s linear;
+    background: #fff;
+}
+
+span::before,
+span::after {
+    content: "";
+    width: 2px;
+    height: 0;
+    position: absolute;
+    transition: all 0.2s linear;
+    background: #fff;
+}
+
+button:hover::before,
+button:hover::after {
+    width: 100%;
+}
+
+button:hover span::before,
+button:hover span::after {
+    height: 100%;
+}
+
+
+/*----- button 1 -----*/
+
+.btn-1::before,
+.btn-1::after {
+    transition-delay: 0.2s;
+}
+
+.btn-1 span::before,
+.btn-1 span::after {
+    transition-delay: 0s;
+}
+
+.btn-1::before {
+    right: 0;
+    top: 0;
+}
+
+.btn-1::after {
+    left: 0;
+    bottom: 0;
+}
+
+.btn-1 span::before {
+    left: 0;
+    top: 0;
+}
+
+.btn-1 span::after {
+    right: 0;
+    bottom: 0;
+}
+
+.btn-1:hover::before,
+.btn-1:hover::after {
+    transition-delay: 0s;
+}
+
+.btn-1:hover span::before,
+.btn-1:hover span::after {
+    transition-delay: 0.2s;
+}
+
+// next section icon style
+.next-section-icon {
+    clip-path: polygon(45% 25%, 70% 0, 48% 78%, 44% 91%, 37% 69%, 16% 1%);
+    background-color: white;
+    height: 50px;
+    width: 70px;
+    margin-top: 60px;
+    cursor: pointer;
+    animation-name: nextSectionIconAnim;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes nextSectionIconAnim {
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+    50%,
+    70% {
+        transform: translateY(-30px);
+        background-color: #1d293a;
+    }
+}
